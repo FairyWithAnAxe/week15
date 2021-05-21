@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper" id="wrapper" style="height: 100vh;">
+    <select name="background" id="background" onchange="theme()">
+        <option disabled selected="selected">Выберите тему</option>
+        <option value="white">Светлая</option>
+        <option value="dark">Ночная</option>
+        <option value="green">Зеленая</option>
+    </select>
+</div>
+
+<script>
+    function theme()
+    {
+        switch(document.getElementById("background").value){
+            case "white": document.getElementById("wrapper").style.backgroundColor="white"; break;
+            case "dark": document.getElementById("wrapper").style.backgroundColor="black"; break;
+            case "green": document.getElementById("wrapper").style.backgroundColor="green"; break;
+        }
+    }
+</script>
+</body>
+</html>
